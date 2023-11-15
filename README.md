@@ -21,7 +21,6 @@ You can weight inaccurately predicted cases high and accurately predicted cases 
 Stopping rule: You can stop once you’ve run a certain number of models, or once the amount of variance explained by the most recent iteration of the model is lower than some threshold. Or you can stop once the change in weights between the two most recent model iterations is lower than some threshold.
 
 
-
 # Clustering
 What is clustering?
 Clustering is all about organizing individual examples or observations into groups, such that individuals in each group resemble fellow group members more than they do nongroup members. This requires the ability to measure similarity.
