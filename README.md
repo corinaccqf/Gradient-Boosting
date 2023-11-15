@@ -1,21 +1,20 @@
-# Boosting models
-In this lesson, you’ll learn about boosting, a type of ensemble modeling that’s very popular for its flexibility and predictive power. Many a Kaggle competition has been won using boosting! Specifically, in this module, you’ll learn about the following:
+# Intro to unsupervised learning
+What is unsupervised learning?
+So far, you’ve studied machine-learning algorithms for regression and classification problems. All of the algorithms that you’ve learned make use of labeled (or tagged) data, where the ground truths of the observations are given. As you already know, supervised learning is about creating algorithms that learn from labeled data. But what if you don’t have the ground truths for the observations? Are you at a dead end?
 
-Boosting compared to other ensemble methods
-# Gradient boosting
-Boosting with classifier and regression problems
-## What is boosting?
-Nearly every time that you’ve learned about a new model in this program, you’ve been asked to play with it to see if you can increase its predictive accuracy. You’ve tried all sorts of tweaks by now: new features, dropping features, adjusting the fitting algorithm, adding or subtracting thresholds, and so forth. Optimizing models this way involves trial and error, and a lot of time. There has to be a better way!
+Of course not! In this lesson, you’ll dive into the challenging but exciting domain of unsupervised learning. In other words, you’ll run algorithms on unlabeled data to derive useful patterns. Unsupervised learning can be challenging, not because the algorithms are too difficult to grasp, but because the problems that unsupervised learning addresses are hard to formalize and evaluate.
 
-In fact, there is, and you’ve already encountered it briefly. Ensemble models combine many less effective models (weak learners) into a single, more effective model (a strong learner). Random forests are a type of bagged ensemble model where many models are run in parallel and their outputs are aggregated. Another class of ensemble models, boosting models, models the data over and over, adjusting the model each time based on what was learned from the previous one.
+The following quote highlights the current state of data science with respect to the different learning types:
 
-The boosting approach is exceptionally flexible. It works for classification and regression, and it can be combined with any of the modeling approaches that you’ve learned about so far. The principle behind boosting is iterative. You start by fitting a simple model on all the data. You identify the information that the model was not able to account for, whether that’s incorrect predictions in classification or residuals in regression. Then you build a new simple model that targets that new pool of information. You repeat this until you reach some predetermined stopping rule. The combination of all the models is then used to make the final predictions.
+“Most of human and animal learning is unsupervised learning. If intelligence was a cake, unsupervised learning would be the cake, supervised learning would be the icing on the cake, and reinforcement learning would be the cherry on the cake. We know how to make the icing and the cherry, but we don’t know how to make the cake. We need to solve the unsupervised learning problem before we can even think of getting to true AI.” —Yann LeCun, VP of Facebook and Director of AI Research
 
-Boosting is great because you can arrive at very accurate predictions using many simple models that are each computationally fast. There are many different implementations of boosting, and they vary along the following axes:
+The quote above makes it clear why unsupervised learning can be exciting. It’s because most of human reasoning and learning operates in an unsupervised manner. In this lesson, you’ll step into the exciting domain of unsupervised learning by exploring two main problems that it needs to tackle:
 
-## Type of simple model: 
-You can use almost any model you like.
-## Index of error:
+Clustering
+Dimensionality reduction
+Although unsupervised learning includes other interesting topics, like anomaly detection, you’ll focus on these two subjects in this lesson.
+
+
 You can use residuals from regression, classification errors, or any cost function.
 ## How the next iteration targets the error: 
 You can weight inaccurately predicted cases high and accurately predicted cases low, you can directly model residuals, or you can model only the subset of the data that was inaccurately predicted.
